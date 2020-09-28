@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
         background: var(--black);
         color: var(--white);
         font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
     }
     a {
         color: var(--white);
@@ -19,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     p, li {
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 
     h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
