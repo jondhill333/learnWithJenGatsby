@@ -5,22 +5,27 @@ import styled from 'styled-components';
 const NavStyles = styled.div`
     display: grid;
     grid-template-columns: 60% 40%;
+    grid-template-rows: 55px auto;
     font-size: 1.2rem;
     font-weight: 100;
-    border: solid 1px red;
-  div {
-
-  }
   ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+    grid-gap: 5px;
     align-items: center;
     justify-content: center;
     padding: 0;
     text-align: center;
   }
+  span{
+    width: 98%;
+    background-color: red;
+    height: 2px;
+    margin: 0 auto;
+    grid-column: 1 / span 2;
+  }
+
   @media(max-width: 1100px) {
     grid-template-columns: 40% 60%;
     ul {
@@ -52,6 +57,7 @@ export default function Nav() {
           <Link to="/instagram">Instagram</Link>
         </li>
       </ul>
+      <span></span>
     </NavStyles>
     )
 }
