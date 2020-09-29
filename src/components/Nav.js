@@ -1,19 +1,34 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+// import Img from 'gatsby-image';
+import LLetter from '../assets/L-Letter-v7.svg';
+import JLetter from '../assets/J-Letter-v7.svg';
 
 const NavStyles = styled.div`
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 55px auto;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 100;
+  div {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  p {
+    margin-left: 10px; 
+  }
+  img {
+    height: 3.3rem;
+    margin: 0px 5px;
+
+    }
   ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
-    align-items: center;
     justify-content: center;
     padding: 0;
     text-align: center;
@@ -22,8 +37,15 @@ const NavStyles = styled.div`
     width: 98%;
     background-color: red;
     height: 2px;
+    /* margin-top: 5px; */
     margin: 0 auto;
     grid-column: 1 / span 2;
+  }
+  .about {
+    transform: translateX(20px);
+  }
+  .prices {
+    transform: translateX(10px);
   }
 
   @media(max-width: 1100px) {
@@ -42,15 +64,19 @@ const NavStyles = styled.div`
 export default function Nav() {
     return (
     <NavStyles>
-      <div>Phone number placeholder</div>
+      <div>
+        <img src={LLetter} alt="el letter in style of driving l plate" />
+        <img src={JLetter}  alt="J letter in style of driving l plate"/>
+        <p>07904 863 418</p>
+      </div>
       <ul>
         <li>
           <Link to="/importantInfo">Important Info</Link>
         </li>
-        <li>
+        <li className="about">
           <Link to="/about">About Me</Link>
         </li>
-        <li>
+        <li className="prices">
           <Link to="/prices">Prices</Link>
         </li>
         <li>
