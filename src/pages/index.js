@@ -31,11 +31,12 @@ const LogoStyles = styled.div`
 
 
 
-export default function HomePage() {
+export default function HomePage(props) {
+    console.log(props);
     return (
         <>
         <LogoStyles>
-            <div class="container">
+            <div className="container">
                 <img src={LogoSVG}  alt="company logo" ></img>
             </div>
         </LogoStyles>

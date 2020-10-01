@@ -6,13 +6,13 @@ import Nav from './Nav';
 import 'normalize.css';
 
 
-export default function Layout({ children }) {
+export default function Layout({ path, children }) {
   return (
     <>
     <GlobalStyles />
-    <Nav />
+    <Nav path={path}/>
     {children}
-    <Footer />
+    <Footer path={path} />
     </>
   );
 }
