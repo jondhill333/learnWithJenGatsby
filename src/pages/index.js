@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // import Logo from '../components/Logo.js';
 import LogoSVG from '../assets/learnwithjenlogov2.svg';
+import SEO from '../components/SEO';
 
 const LogoStyles = styled.div`
     .container {
@@ -25,16 +26,13 @@ const LogoStyles = styled.div`
             transform: scale(2) translateX(8px) translateY(15%) ;
         }
     }
-
-
 `;
 
-
-
 export default function HomePage(props) {
-    console.log(props);
+    console.log(props.path);
     return (
         <>
+        <SEO title='Home' />
         <LogoStyles>
             <div className="container">
                 <img src={LogoSVG}  alt="company logo" ></img>

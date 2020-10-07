@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import SEO from '../components/SEO';
 // import fetch from 'isomorphic-fetch';
 
 const PhotoGridStyles = styled.div`
@@ -8,6 +9,9 @@ const PhotoGridStyles = styled.div`
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
+`;
+
+const PhotoStyles = styled.div`
   img {
     width: 100%;
     height: 100%;
@@ -15,20 +19,18 @@ const PhotoGridStyles = styled.div`
   }
 `;
 
-
 export default function instagramPage({ data }) {
     const photos = data.instaPics.nodes;
     return (
         <>
-        <PhotoGridStyles>
-            {photos.map(photo => (
-                <div key={photo.id}>
-                    <img src={photo.media_url} alt='instagram post' />
-                </div>
-            ))}
-        </PhotoGridStyles>
-
-            <p>Hey, I'm the instagram page</p>
+        <SEO title='Instagram' />
+          <PhotoGridStyles>
+              {photos.map(photo => (
+                  <PhotoStyles key={photo.id}>
+                      <img src={photo.media_url} alt='instagram post' />
+                  </PhotoStyles>
+              ))}
+          </PhotoGridStyles>
         </>
     );
 }
@@ -39,6 +41,7 @@ export const query = graphql`
       nodes {
         media_url
         id
+        caption
       }
     }
   }

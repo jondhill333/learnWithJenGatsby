@@ -63,10 +63,17 @@ const NavStyles = styled.div`
     }
   }
   @media(max-width: 500px) {
-    grid-template-columns: 30% 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    div {
+      display: none;
+    }
     li {
       li {
-      font-size: 0.6rem;
+      font-size: 0.4rem;
     }
     }
   }
@@ -78,15 +85,15 @@ export default function Nav({ path }) {
     return (
     <NavStyles>
       <div className="infoSection">
-      {
-      path !== "/" && 
-        <>
-        <img src={LLetter} alt="el letter in style of driving l plate" />
-        <img src={JLetter}  alt="J letter in style of driving l plate"/>
-        <p>07904 863 418</p>
-        </>
-      }
-            </div>
+        {
+        path !== "/" && 
+          <>
+          <img src={LLetter} alt="el letter in style of driving l plate" />
+          <img src={JLetter}  alt="J letter in style of driving l plate"/>
+          <p>07904 863 418</p>
+          </>
+        }
+      </div>
       <ul>
         <li>
           <Link to="/">Home</Link>
