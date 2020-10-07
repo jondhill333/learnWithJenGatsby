@@ -34,17 +34,20 @@ const NavStyles = styled.div`
   }
   li {
     margin-right: 2rem;
+    transition: all 0.4s; 
   }
+  li:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
   span{
     width: 98%;
     background-color: red;
     height: 2px;
-    /* margin-top: 5px; */
     margin: 0 auto;
     grid-column: 1 / span 2;
   }
   a {
-    transition: all 0.2s; 
    &[aria-current="page"]::after {
     width: 100%;
     bottom: 0;
@@ -56,10 +59,6 @@ const NavStyles = styled.div`
     opacity: 1;
     }
   }
-  a:hover {
-      transform: scale(2);
-      color: orange;
-    }
 
   @media(max-width: 1100px) {
     grid-template-columns: 40% 60%;
