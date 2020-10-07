@@ -26,6 +26,11 @@ const LogoStyles = styled.div`
             transform: scale(2) translateX(8px) translateY(15%) ;
         }
     }
+    @-moz-document url-prefix() {
+        img {
+        transform: scale(0.9) translateX(5px) translateY(25%)  ;
+    }
+}
 `;
 
 export default function HomePage(props) {

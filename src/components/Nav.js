@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-// import Img from 'gatsby-image';
 import LLetter from '../assets/L-Letter-v7.svg';
 import JLetter from '../assets/J-Letter-v7.svg';
 
@@ -23,15 +22,18 @@ const NavStyles = styled.div`
     height: 3.3rem;
     margin: 0px 5px;
 
-    }
+  }
   ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 5px;
     justify-content: center;
     padding: 0;
     text-align: center;
+  }
+  li {
+    margin-right: 2rem;
   }
   span{
     width: 98%;
@@ -41,17 +43,23 @@ const NavStyles = styled.div`
     margin: 0 auto;
     grid-column: 1 / span 2;
   }
-  .about {
-    transform: translateX(20px);
-  }
-  .prices {
-    transform: translateX(10px);
-  }
   a {
-   &[aria-current="page"] {
-    text-decoration: underline var(--red);
+    transition: all 0.2s; 
+   &[aria-current="page"]::after {
+    width: 100%;
+    bottom: 0;
+    height: 2px; 
+    margin: 0 auto;
+    background: var(--red);
+    content: "";
+    display: block;
+    opacity: 1;
     }
   }
+  a:hover {
+      transform: scale(2);
+      color: orange;
+    }
 
   @media(max-width: 1100px) {
     grid-template-columns: 40% 60%;

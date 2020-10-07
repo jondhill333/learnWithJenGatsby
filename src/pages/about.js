@@ -12,7 +12,7 @@ margin: 1rem;
     display: flex;
     margin-top: 1.6rem;
     border: red solid 1px;
-    height: 90%;
+    height: 91%;
     width: 100%;  
     text-align: center;
     justify-content: center;
@@ -20,7 +20,7 @@ margin: 1rem;
     font-size: 1.4rem;
 }
 .textArea {
-    font-size: 1.4rem;
+    font-size: 1.16rem;
     padding-right: 2rem;
     text-align: justify;
     line-height: 1.2;
