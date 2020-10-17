@@ -12,12 +12,15 @@ const GlobalStyles = createGlobalStyle`
         background: var(--black);
         color: var(--white);
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 10px;
+        font-size: 15px;
     }
     a {
         color: var(--white);
         text-decoration: none;
     }
+
+    ul {
+    list-style: none;
 
     p, li {
     letter-spacing: 1px;

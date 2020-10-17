@@ -24,7 +24,6 @@ const NavStyles = styled.div`
 
   }
   ul {
-    list-style: none;
     display: grid;
     grid-template-columns: repeat(5, auto);
     grid-gap: 5px;

@@ -17,10 +17,9 @@ margin: 1rem;
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 1.4rem;
 }
 .textArea {
-    font-size: 1.16rem;
+    font-size: 1.2rem;
     padding-right: 2rem;
     text-align: justify;
     line-height: 1.2;
