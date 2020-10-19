@@ -52,9 +52,10 @@ export default function Footer({ path }) {
           <img src={LLetter} alt="el letter in style of driving l plate" />
           <img src={JLetter}  alt="J letter in style of driving l plate"/>
           <p>07904 863 418</p>
+          <p>jen@learnwithjen.co.uk</p>
         </div>
         }
-        <p>&copy; Jon Hill {new Date().getFullYear()} </p>
+        {/* <p>&copy; Jon Hill {new Date().getFullYear()} </p> */}
       </FooterStyles>
   );
 }

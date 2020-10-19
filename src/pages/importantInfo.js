@@ -5,15 +5,31 @@ import SEO from '../components/SEO';
 const MenuStyles = styled.div`
     display: grid;
     max-width: 2000px;
-    margin: 10px 100px;
-    grid-gap: 10px 50px;
-    grid-template-columns: repeat(5, 1fr);
+    margin: 20px 0px;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, 200px);
     justify-content: center;
+    align-items: center;
     padding: 0;
-    >* {
-        grid-column: 1 / -1;
+    div{
+        width: 100%;
+        /* border: solid red 1px; */
+        text-align: center;
+        font-size: 1.1rem;
     }
-    ul {
+    /* div:nth-child(2){
+        transform: translateX(-5px);
+    }
+    div:nth-child(4){
+        transform: translateX(20px);
+    }
+    div:nth-child(5){
+        transform: translateX(-5px);
+    }  */
+    /* >* {
+        grid-column: 1 / -1;
+    } */
+    /* ul {
         display: grid;
         grid-template-columns: repeat( auto-fill, minmax(200px, 1fr) ) ; 
         grid-gap: 5px;
@@ -29,7 +45,7 @@ const MenuStyles = styled.div`
     }
     li:nth-child(5){
         transform: translateX(-5px);
-    }
+    } */
 `;
 
 const ArticleStyles = styled.div`
@@ -76,7 +92,34 @@ const ArticleStyles = styled.div`
 
     img {
       max-width: 100%;
+      width: 100%;
+      object-fit: contain;
     }
+    @media(max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 98%;
+        max-width: 98%;
+        margin: 10px 20px 50px 10px;
+        gap: 0;
+    >blockquote {
+      font-size: 40px;
+    }
+    h2 {
+        text-align: center;
+    }
+    /* div {
+      display: none;
+    }
+    ul {
+      margin-left: 30px;
+    }
+    li {
+      font-size: 0.8rem;
+      margin-right: 1rem;
+    } */
+}
 
 
 
@@ -87,13 +130,11 @@ export default function InfoPage(props) {
         <>
             <SEO title='Important Info' />
             <MenuStyles>
-                <ul>
-                    <li><a href="#beginning">Starting from the very beginning</a></li>
-                    <li><a href="#theory">Theory Test Practice</a></li>
-                    <li><a href="#experienced">I'm experienced but need to brush up on my skills</a></li>
-                    <li><a href="#test">Booking my Driving Test</a></li>
-                    <li><a href="#passPlus">Pass Plus</a></li>
-                </ul>
+                    <div><a href="#beginning">Starting from the very beginning</a></div>
+                    <div><a href="#theory">Theory Test Practice</a></div>
+                    <div><a href="#experienced">I'm experienced but need to brush up on my skills</a></div>
+                    <div><a href="#test">Booking my Driving Test</a></div>
+                    <div><a href="#passPlus">Pass Plus</a></div>
             </MenuStyles>
             <ArticleStyles className="post" id="beginning">
                 <h2>Chapter Three: The Great American Game</h2>

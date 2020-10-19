@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: Arial, Helvetica, sans-serif;
         font-size: 15px;
     }
+    body, html { overflow-x:hidden; }
     a {
         color: var(--white);
         text-decoration: none;

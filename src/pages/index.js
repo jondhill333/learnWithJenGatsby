@@ -23,7 +23,7 @@ const LogoStyles = styled.div`
     }
     @media(max-width: 500px) {
         img {
-            transform: scale(2) translateX(8px) translateY(15%) ;
+            transform: scale(2.0) translateX(8px) translateY(15%) ;
         }
     }
     @-moz-document url-prefix() {

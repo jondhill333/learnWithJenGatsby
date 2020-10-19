@@ -33,12 +33,9 @@ const NavStyles = styled.div`
   }
   li {
     margin-right: 2rem;
-    transition: all 0.4s; 
+    position: relative;
   }
-  li:hover {
-      transform: scale(1.1);
-      opacity: 0.9;
-    }
+
   span{
     width: 98%;
     background-color: red;
@@ -46,18 +43,38 @@ const NavStyles = styled.div`
     margin: 0 auto;
     grid-column: 1 / span 2;
   }
+
   a {
    &[aria-current="page"]::after {
     width: 100%;
     bottom: 0;
     height: 2px; 
-    margin: 0 auto;
+    margin: 3px auto;
     background: var(--red);
     content: "";
     display: block;
     opacity: 1;
     }
   }
+
+  a:after {
+    width: 0%;
+    height: 2px; 
+    margin: 3px auto;
+    background: var(--red);
+    content: "";
+    display: block;
+    opacity: 1;
+    transition: width .3s ease-in-out; 
+    right: 0;
+  }
+  a:hover:after {
+     width: 100%;
+     background: var(--red);
+     left: 0;
+    }
+
+
 
   @media(max-width: 1100px) {
     grid-template-columns: 40% 60%;
@@ -77,10 +94,12 @@ const NavStyles = styled.div`
     div {
       display: none;
     }
-    li {
-      li {
-      font-size: 0.4rem;
+    ul {
+      margin-left: 30px;
     }
+    li {
+      font-size: 0.8rem;
+      margin-right: 1rem;
     }
   }
 `;
@@ -97,6 +116,7 @@ export default function Nav({ path }) {
           <img src={LLetter} alt="el letter in style of driving l plate" />
           <img src={JLetter}  alt="J letter in style of driving l plate"/>
           <p>07904 863 418</p>
+          <p>jen@learnwithjen.co.uk</p>
           </>
         }
       </div>
