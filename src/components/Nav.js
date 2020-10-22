@@ -10,16 +10,28 @@ const NavStyles = styled.div`
     grid-template-rows: 55px auto;
     font-size: 1.1rem;
     font-weight: 100;
-  div {
+    margin-top: 2px;
+    align-items: center;
+
+  .infoSection {
     margin-left: 10px;
     display: flex;
     flex-direction: row;
+
+    /* margin-bottom: 10px; */
   }
-  p {
-    margin-left: 10px; 
+  .contactGroup {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
+    font-size: 1rem;
+    
+  }
+  .contact {
+    margin: 1px 0px 1px 10px;
   }
   img {
-    height: 3.3rem;
+    height: 3rem;
     margin: 0px 5px;
 
   }
@@ -36,7 +48,7 @@ const NavStyles = styled.div`
     position: relative;
   }
 
-  span{
+  .bottomBorder{
     width: 98%;
     background-color: red;
     height: 2px;
@@ -115,8 +127,10 @@ export default function Nav({ path }) {
           <>
           <img src={LLetter} alt="el letter in style of driving l plate" />
           <img src={JLetter}  alt="J letter in style of driving l plate"/>
-          <p>07904 863 418</p>
-          <p>jen@learnwithjen.co.uk</p>
+          <div className="contactGroup">
+            <span className="contact phone">07904 863 418</span>
+            <span className="contact email">jen@learnwithjen.co.uk</span>
+          </div>
           </>
         }
       </div>
@@ -137,7 +151,7 @@ export default function Nav({ path }) {
           <Link to="/instagram">Instagram</Link>
         </li>
       </ul>
-      <span></span>
+      <div className="bottomBorder"></div>
     </NavStyles>
     )
 }

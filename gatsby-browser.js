@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Layout from './src/components/Layout';
-import { silentAuth } from "./src/utils/auth"
+import { silentAuth } from "./src/utils/auth";
 
 export function wrapPageElement({ element, props }) {
   return <Layout {...props}>{element}</Layout>;
